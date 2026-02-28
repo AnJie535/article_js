@@ -15,6 +15,10 @@
     //1.初始化变量
     let isProcessing = false; // 标记是否正在执行发布流程
     const DEBOUNCE_LOCK_TIME = 3000; // 防抖锁定时间（3秒）
+    const souhu_one='a50v3i.mp';
+    const souhu_two='aq469z.mp';
+    const souhu_one_name='搜狐号(琪)';
+    const souhu_two_name='搜狐号(康)';
     const site=[
         {tip:'dev',name:'(琪)百家号',domain:'v0iqn9.mp',siteid:201834,article_id:27461429,attach_access_key:'f300a34b8a477608f7e445e3fa26403f'},
         {tip:'dev',name:'(琪)知乎号',domain:'vl8ysg.mp',siteid:201836,article_id:27461433,attach_access_key:'78f3e3fd5780012c3b25271e8ca97f89'},
@@ -60,7 +64,7 @@ function createButLi() {
     but.id = 'publish_other';
     //viewer.style.display = 'none';
     but.innerHTML = `
-        <a class="btn btn-normal btn-warning publish-submit" style="width:180px">[搜狐号(琪)]同步其他平台</a>
+        <a class="btn btn-normal btn-warning publish-submit" style="width:180px">[${souhu_one_name}]同步其他平台</a>
     `;
     const fotter=document.getElementsByClassName('test')[0];
     fotter.classList.add('center');
@@ -93,7 +97,7 @@ function createButLi() {
                     isProcessing = false;
                     but.disabled = false;
                     but.style.background = '#42b983';
-                    but.textContent = '[搜狐号(琪)]同步其他平台';
+                    but.textContent = `[${souhu_one_name}]同步其他平台`;
                     logRequest(`✅ 防抖锁已释放（${DEBOUNCE_LOCK_TIME/1000}秒后可再次触发）`);
                 }, DEBOUNCE_LOCK_TIME);
             }
@@ -106,7 +110,7 @@ function createButKang() {
     but.id = 'kpublish_other';
     //viewer.style.display = 'none';
     but.innerHTML = `
-        <a class="btn btn-normal btn-danger publish-submit" style="width:180px;margin-top:10px;">[搜狐号(康)]同步其他平台</a>
+        <a class="btn btn-normal btn-danger publish-submit" style="width:180px;margin-top:10px;">[${souhu_two_name}]同步其他平台</a>
     `;
     const fotter=document.getElementsByClassName('test')[0];
     fotter.classList.add('center');
@@ -139,7 +143,7 @@ function createButKang() {
                     isProcessing = false;
                     but.disabled = false;
                     but.style.background = '#42b983';
-                    but.textContent = '[搜狐号(康)]同步其他平台';
+                    but.textContent = `[${souhu_two_name}]同步其他平台`;
                     logRequest(`✅ 防抖锁已释放（${DEBOUNCE_LOCK_TIME/1000}秒后可再次触发）`);
                 }, DEBOUNCE_LOCK_TIME);
             }
@@ -577,12 +581,12 @@ function createButKang() {
     }
 
     // 9. 初始化执行
-  if(document.getElementsByClassName('aw-caiji-setting')[0].innerHTML.indexOf('a50v3i.mp')>0)
+  if(document.getElementsByClassName('aw-caiji-setting')[0].innerHTML.indexOf(souhu_one)>0)
    {
        createButLi();
        createLogPanel();
     }
-    if(document.getElementsByClassName('aw-caiji-setting')[0].innerHTML.indexOf('aq469z.mp')>0)
+    if(document.getElementsByClassName('aw-caiji-setting')[0].innerHTML.indexOf(souhu_two)>0)
     {
         createButKang();
         createLogPanel();
