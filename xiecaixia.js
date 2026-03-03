@@ -17,18 +17,18 @@
     const DEBOUNCE_LOCK_TIME = 3000; // 防抖锁定时间（3秒）
     const souhu_one='a50v3i.mp';
     const souhu_two='aq469z.mp';
-    const souhu_one_name='搜狐号(琪)';
-    const souhu_two_name='搜狐号(康)';
+    const souhu_one_name='搜狐号(A)';
+    const souhu_two_name='搜狐号(B)';
     const site=[
-        {tip:'dev',name:'(琪)百家号',domain:'v0iqn9.mp',siteid:201834,article_id:27461429,attach_access_key:'f300a34b8a477608f7e445e3fa26403f'},
-        {tip:'dev',name:'(琪)知乎号',domain:'vl8ysg.mp',siteid:201836,article_id:27461433,attach_access_key:'78f3e3fd5780012c3b25271e8ca97f89'},
-        {tip:'dev',name:'(琪)头条号',domain:'1t6j7l.mp',siteid:201835,article_id:27461434,attach_access_key:'e66ff150bff8ebe883d44b3a8506f2ac'},
+        {tip:'dev',name:'(A)百家号',domain:'v0iqn9.mp',siteid:201834,article_id:27461429,attach_access_key:'f300a34b8a477608f7e445e3fa26403f'},
+        {tip:'dev',name:'(A)知乎号',domain:'vl8ysg.mp',siteid:201836,article_id:27461433,attach_access_key:'78f3e3fd5780012c3b25271e8ca97f89'},
+        {tip:'dev',name:'(A)头条号',domain:'1t6j7l.mp',siteid:201835,article_id:27461434,attach_access_key:'e66ff150bff8ebe883d44b3a8506f2ac'},
     ];
 
     const site_kang=[
-        {tip:'dev',name:'(康)百家号',domain:'fdbe72.mp',siteid:202129,article_id:27491289,attach_access_key:'9060e5f4a7c0587a38fcb527fa71014b'},
-        {tip:'dev',name:'(康)知乎号',domain:'dw196g.mp',siteid:202131,article_id:27491323,attach_access_key:'4aad958aa3213f2f622213d95f22b29f'},
-        {tip:'dev',name:'(康)头条号',domain:'k0hj9f.mp',siteid:202130,article_id:27491288,attach_access_key:'fd58f6d4484af97ce94e55a491d09467'},
+        {tip:'dev',name:'(B)百家号',domain:'fdbe72.mp',siteid:202129,article_id:27491289,attach_access_key:'9060e5f4a7c0587a38fcb527fa71014b'},
+        {tip:'dev',name:'(B)知乎号',domain:'dw196g.mp',siteid:202131,article_id:27491323,attach_access_key:'4aad958aa3213f2f622213d95f22b29f'},
+        {tip:'dev',name:'(B)头条号',domain:'k0hj9f.mp',siteid:202130,article_id:27491288,attach_access_key:'fd58f6d4484af97ce94e55a491d09467'},
     ];
 
     let dynamicSiteList = [];
